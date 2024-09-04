@@ -38,7 +38,7 @@
 #include "Server.hpp"
 #include "Client.hpp"
 #include "Defines.hpp"
-#include "Commandes.hpp"
+#include "Commands.hpp"
 #include "Channel.hpp"
 
 # define CLIENT_MAX 100

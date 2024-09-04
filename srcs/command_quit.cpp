@@ -4,7 +4,7 @@
 
 bool	quitCommand(Server &server, Client &client, std::vector<std::string> input)
 {
-	Client	*findClient = server.findClient(client.getNickname());
+	// Client	*findClient = server.findClient(client.getNickname());
 	std::string	log;
 	std::string	msg = ": leaving";
 	std::string	chanName;
@@ -21,7 +21,7 @@ bool	quitCommand(Server &server, Client &client, std::vector<std::string> input)
 		log = QUIT_MSG(client.getNickname(), msg);
 		if (server.findChannel(chanName) != NULL){
 			server.findChannel(chanName)->sendMessageToMembers(&client, log);
-			channel->removeMember(findClient);
+			channel->removeMember(server.findClient(client.getNickname()));
 		}
 	}
 	log = QUIT_MSG(client.getNickname(), msg);

@@ -1,6 +1,6 @@
 #include "../includes/ft_irc.hpp"
 #include "../includes/Client.hpp"
-#include "../includes/Commandes.hpp"
+#include "../includes/Commands.hpp"
 #include <sstream>
 
 std::ostream& operator<<(std::ostream & o, pollfd const &pollfdList)
